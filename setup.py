@@ -10,7 +10,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'autoenv=autoenv_tool.cli:autoenv_tool',  # Komanda nomi 'autoenv'
+            'autoenv=autoenv_tool.cli:autoenv',  # Komanda nomi 'autoenv'
         ],
     },
 
