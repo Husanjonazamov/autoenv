@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="autoenv",
+    name="autoenv-tool",
     version="0.1",
     packages=find_packages(),
     install_requires=[
@@ -10,12 +10,13 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'autoenv=autoenv.cli:autoenv',
+            'autoenv=autoenv_tool.cli:autoenv_tool',  # Komanda nomi 'autoenv'
         ],
     },
+
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url='https://github.com/Husanjonazamov/autoenv',
+    url='https://github.com/Husanjonazamov/autoenv-tool',
     author='Husanjon Azamov',
     author_email='azamovhusanboy@gmail.com',
     classifiers=[

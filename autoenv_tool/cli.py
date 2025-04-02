@@ -1,7 +1,7 @@
 # autoenv/cli.py
 import os
 import sys
-from autoenv.utils.env import read_env, create_env
+from autoenv_tool.utils.env import read_env, create_env
 
 
 def autoenv():
