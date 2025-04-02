@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+autoenv/__init__.py
+autoenv/cli.py
+autoenv.egg-info/PKG-INFO
+autoenv.egg-info/SOURCES.txt
+autoenv.egg-info/dependency_links.txt
+autoenv.egg-info/entry_points.txt
+autoenv.egg-info/requires.txt
+autoenv.egg-info/top_level.txt
+autoenv/utils/__init__.py
+autoenv/utils/env.py
+tests/__init__.py
+tests/test_autoenv.py
