@@ -5,4 +5,4 @@ Autoenv - bu terminal orqali `.env` faylini o'qish va tahrirlashni osonlashtirad
 ## O'rnatish
 
 ```bash
-pip install autoenv
+pip install autoenv-tool
