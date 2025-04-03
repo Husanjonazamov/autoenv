@@ -1,7 +1,4 @@
-# autoenv/utils/env.py
 import os
-
-
 
 def read_env(env_file):
     """ .env faylidan o'zgaruvchilarni o'qish """
@@ -12,37 +9,32 @@ def read_env(env_file):
             if '=' in line:
                 key, value = line.strip().split('=', 1)
                 env_data[key] = value
-    return env_data
 
 
 def create_env(env_file):
     """ .env faylini yaratish """
     with open(env_file, "w") as f:
         f.write("# .env fayli\n")
-    print(f"{env_file} yaratildi!")
+    print("\033[92m" + f"{env_file} yaratildi!" + "\033[0m")  # Yashil rang
     
     
-
 def create_init_py():
     """ utils/__init__.py faylini yaratish va ichiga `from . import env` yozish """
     init_py_path = os.path.join("utils", "__init__.py")
     with open(init_py_path, "w") as f:
         f.write("from . import env\n")
-    
-    
 
 
 def create_env_file():
     if not os.path.exists(".env"):
         with open(".env", "w") as f:
             f.write("")  
-        print("`.env` fayli yaratildi!")
-        
+        print("\033[92m" + "`.env` fayli yaratildi!" + "\033[0m")  # Yashil rang
 
 def create_utils_folder():
     if not os.path.exists("utils"):
         os.makedirs("utils")
-        print("`utils` papkasi yaratildi.")
+        print("\033[92m" + "`utils` papkasi yaratildi." + "\033[0m")  # Yashil rang
 
 
 def create_env_py():
@@ -51,7 +43,7 @@ def create_env_py():
         lines = env_file.readlines()
 
     if not lines:  # Agar .env bo'sh bo'lsa
-        print(".env bo'sh")
+        print("\033[91m" + ".env bo'sh!" + "\033[0m")  # Qizil rang
         return
 
     with open(env_py_path, "w") as f:
@@ -66,11 +58,4 @@ env.read_env()
                 key = line.split('=')[0].strip()
                 f.write(f"{key} = env('{key}')\n")
 
-    print("`env.py` yangilandi.")
-
-def main():
-    create_env_file()
-    create_utils_folder()
-    create_env_py()
-
-main()
+    print("\033[93m" + "`env.py` yangilandi." + "\033[0m")  # Sariq rang

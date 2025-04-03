@@ -13,3 +13,5 @@ autoenv_tool/utils/__init__.py
 autoenv_tool/utils/env.py
 tests/__init__.py
 tests/test_autoenv.py
+utils/__init__.py
+utils/env.py
