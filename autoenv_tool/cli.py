@@ -1,6 +1,8 @@
 import os
 import sys
-from autoenv_tool.utils.env import read_env, create_env, create_env_file, create_utils_folder, create_env_py
+from autoenv_tool.utils.env import (
+    read_env, create_env, create_env_file, create_utils_folder, create_env_py, create_init_py
+)
 
 
 def autoenv():
@@ -40,6 +42,7 @@ def create():
     create_env_file()
     create_utils_folder()
     create_env_py()
+    create_init_py()
 
 
 create()

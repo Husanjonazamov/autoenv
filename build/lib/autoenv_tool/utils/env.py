@@ -28,18 +28,12 @@ def create_env_file():
         with open(".env", "w") as f:
             f.write("")  
         print("`.env` fayli yaratildi!")
+        
 
 def create_utils_folder():
     if not os.path.exists("utils"):
         os.makedirs("utils")
         print("`utils` papkasi yaratildi.")
-
-
-def create_init_py():
-    """ utils/__init__.py faylini yaratish va ichiga `from . import env` yozish """
-    init_py_path = os.path.join("utils", "__init__.py")
-    with open(init_py_path, "w") as f:
-        f.write("from . import env\n")
 
 
 def create_env_py():
@@ -65,3 +59,9 @@ env.read_env()
 
     print("`env.py` yangilandi.")
 
+def main():
+    create_env_file()
+    create_utils_folder()
+    create_env_py()
+
+main()
