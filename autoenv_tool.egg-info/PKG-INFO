@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: autoenv-tool
-Version: 0.2
+Version: 0.3
 Home-page: https://github.com/Husanjonazamov/autoenv-tool
 Author: Husanjon Azamov
 Author-email: azamovhusanboy@gmail.com
@@ -25,4 +25,4 @@ Autoenv - bu terminal orqali `.env` faylini o'qish va tahrirlashni osonlashtirad
 ## O'rnatish
 
 ```bash
-pip install autoenv
+pip install autoenv-tool
