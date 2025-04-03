@@ -23,6 +23,15 @@ def create_env(env_file):
     
     
 
+def create_init_py():
+    """ utils/__init__.py faylini yaratish va ichiga `from . import env` yozish """
+    init_py_path = os.path.join("utils", "__init__.py")
+    with open(init_py_path, "w") as f:
+        f.write("from . import env\n")
+    
+    
+
+
 def create_env_file():
     if not os.path.exists(".env"):
         with open(".env", "w") as f:
