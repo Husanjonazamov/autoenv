@@ -1,7 +1,7 @@
 # tests/test_autoenv.py
 import os
 import pytest
-from autoenv.utils.env import read_env, create_env
+from autoenv_tool.utils.env import read_env, create_env
 
 
 @pytest.fixture
